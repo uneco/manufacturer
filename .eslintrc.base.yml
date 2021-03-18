@@ -1,0 +1,98 @@
+root: true
+parser: "@typescript-eslint/parser"
+parserOptions:
+  ecmaVersion: 2020
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+  project:
+    - ./tsconfig.json
+env:
+  es6: true
+  node: false
+  browser: true
+settings:
+  react:
+    version: detect
+plugins:
+  - "@typescript-eslint"
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/eslint-recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:react/recommended
+  - plugin:react-hooks/recommended
+  - standard
+rules:
+  semi:
+    - off
+  "@typescript-eslint/semi":
+    - error
+    - never
+  "@typescript-eslint/member-delimiter-style":
+    - error
+  "@typescript-eslint/no-use-before-define":
+    - off
+  node/no-unsupported-features/es-syntax:
+    - off
+  react/prop-types:
+    - off
+  no-use-before-define:
+    - off
+  node/no-missing-import:
+    - off
+  comma-dangle:
+    - error
+    - always-multiline
+  max-statements-per-line:
+    - error
+    - max: 1
+  newline-after-var:
+    - error
+  newline-before-return:
+    - error
+  padding-line-between-statements:
+    - error
+  object-shorthand:
+    - error
+  no-multi-assign:
+    - error
+  no-nested-ternary:
+    - error
+  no-confusing-arrow:
+    - error
+  no-shadow:
+    - error
+  prefer-destructuring:
+    - error
+  prefer-exponentiation-operator:
+    - error
+  prefer-numeric-literals:
+    - error
+  prefer-object-spread:
+    - error
+  prefer-template:
+    - error
+  prefer-reflect:
+    - error
+  no-console:
+    - warn
+  object-curly-newline:
+    - error
+    - ObjectExpression:
+        multiline: true
+        minProperties: 1
+        consistent: true
+      ObjectPattern: never
+      ImportDeclaration: never
+      ExportDeclaration: never
+  object-property-newline:
+    - error
+    - allowAllPropertiesOnSameLine: false
+overrides:
+  - files:
+      - "**/tools/**/*.ts"
+      - "**/tests/**/*.ts"
+    rules:
+      no-console:
+        - off

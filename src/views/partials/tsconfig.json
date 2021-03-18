@@ -1,0 +1,16 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "include": [
+    "../partials/**/*.tsx",
+    "../components/**/*.tsx"
+  ],
+  "compilerOptions": {
+    "baseUrl": "../../../",
+    "outDir": "../../../lib",
+    "composite": true,
+    "paths": {
+      "@partials/*": ["./src/views/partials/*"],
+      "@components/*": ["./src/views/components/*"]
+    }
+  }
+}

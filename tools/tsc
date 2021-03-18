@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ARGS="${@/--noEmit/}"
+
+echo $ARGS
+yarn tsc $ARGS

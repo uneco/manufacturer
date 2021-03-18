@@ -1,0 +1,25 @@
+{
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./typing/**/*.d.ts"
+  ],
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./lib",
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "jsx": "preserve",
+    /* Additional Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "importsNotUsedAsValues": "error"
+  }
+}

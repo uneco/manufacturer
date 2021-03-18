@@ -1,0 +1,7 @@
+extends:
+  - ./.eslintrc.base.yml
+parserOptions:
+  project:
+    - ./tsconfig.json
+    - ./src/*/tsconfig.json
+  EXPERIMENTAL_useSourceOfProjectReferenceRedirect: true
