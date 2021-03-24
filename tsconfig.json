@@ -12,6 +12,9 @@
       "path": "./src/app"
     },
     {
+      "path": "./src/config"
+    },
+    {
       "path": "./src/views/pages"
     },
     {
