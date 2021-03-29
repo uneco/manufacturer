@@ -25,7 +25,7 @@ const createSubscription = (counter: Record<string, number>) => {
   }
 }
 
-export function useStore <
+export function useRemoteStore <
   T extends EntitiesSchemaToStoreType<unknown, unknown, false>
 > (store: T): SynchronizeType<T> {
   const sub = createSubscription(subscriptionCounter)
