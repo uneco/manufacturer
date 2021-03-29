@@ -1,6 +1,5 @@
-import firebase from 'firebase'
-import type { EntitiesSchemaToStoreType } from './document-store-types'
-import StoreSchema from './store.json'
+import type firebase from 'firebase'
+import type { EntitiesSchemaToStoreType } from '@models/document-store-types'
 
 export type FirebaseStoreType<S> = EntitiesSchemaToStoreType<S, {
   where(
@@ -38,15 +37,18 @@ function createFirebaseQueryProxy (ref: firebase.firestore.Query) {
   }
 }
 
-function createStore <T> (entities: T): FirebaseStoreType<T> {
-  const entityNames = Object.keys(entities)
+interface StoreInput <T> {
+  entities: T;
+  firestore: firebase.firestore.Firestore;
+}
+
+export function createStore <T> (input: StoreInput<T>): FirebaseStoreType<T> {
+  const entityNames = Object.keys(input.entities)
   const store: Record<string, unknown> = {}
 
   for (const name of entityNames) {
-    store[name] = createFirebaseCollectionProxy(firebase.firestore().collection(name))
+    store[name] = createFirebaseCollectionProxy(input.firestore.collection(name))
   }
 
   return store as FirebaseStoreType<T>
 }
-
-export const store = createStore(StoreSchema.entities)

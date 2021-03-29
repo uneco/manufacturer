@@ -1,12 +1,17 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../../tsconfig.base.json",
   "include": [
     "./**/*",
-    "./**/*.json"
+    "../../app/**/*",
+    "../../models/**/*",
+    "../pages/**/*",
+    "../partials/**/*",
+    "../components/**/*",
+    "../hooks/**/*"
   ],
   "compilerOptions": {
-    "baseUrl": "../../",
-    "outDir": "../../lib",
+    "baseUrl": "../../../",
+    "outDir": "../../../lib",
     "composite": true,
     "paths": {
       "@app/*": ["./src/app/*"],

@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import { useEffect } from 'react'
-import type { EntitiesSchemaToStoreType, SynchronizeType } from '../document-store-types'
+import type { EntitiesSchemaToStoreType, SynchronizeType } from '@models/document-store-types'
 
 const subscriptionCounter: Record<string, number> = {}
 const createSubscription = (counter: Record<string, number>) => {

@@ -3,8 +3,7 @@ import '@styles/App.css'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Routes from './Routes'
 import NavigationArea from '@partials/NavigationArea'
-import { store } from '@models/store'
-import context from './context'
+import context, { store } from '@app/context'
 
 const Root: React.FC = () => {
   return (

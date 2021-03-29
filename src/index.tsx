@@ -1,7 +1,7 @@
 import './config/initializers/firebase'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Root from './app/Root'
+import Root from './views/entrypoint/Root'
 import './styles/index.css'
 
 ReactDOM.render(

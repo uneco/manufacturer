@@ -1,9 +1,9 @@
 {
   "extends": "../../../tsconfig.base.json",
   "include": [
-    "../../**/*.ts",
-    "../../**/*.tsx",
-    "../../**/*.json"
+    "./**/*",
+    "../../app/**/*",
+    "../../models/**/*"
   ],
   "compilerOptions": {
     "baseUrl": "../../../",

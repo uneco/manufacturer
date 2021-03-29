@@ -1,9 +1,12 @@
 {
   "extends": "../../../tsconfig.base.json",
   "include": [
-    "../../**/*.ts",
-    "../../**/*.tsx",
-    "../../**/*.json"
+    "./**/*",
+    "../../app/**/*",
+    "../../models/**/*",
+    "../partials/**/*",
+    "../components/**/*",
+    "../hooks/**/*"
   ],
   "compilerOptions": {
     "baseUrl": "../../../",

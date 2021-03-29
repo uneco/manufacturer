@@ -19,6 +19,9 @@
       "path": "./src/config"
     },
     {
+      "path": "./src/views/entrypoint"
+    },
+    {
       "path": "./src/views/pages"
     },
     {
