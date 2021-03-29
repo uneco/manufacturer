@@ -5,11 +5,15 @@
   },
   "include": [
     "src/**/*.tsx",
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/**/*.json"
   ],
   "references": [
     {
       "path": "./src/app"
+    },
+    {
+      "path": "./src/models"
     },
     {
       "path": "./src/config"
@@ -22,6 +26,9 @@
     },
     {
       "path": "./src/views/components"
+    },
+    {
+      "path": "./src/views/hooks"
     }
   ]
 }

@@ -17,10 +17,12 @@ module.exports = {
   ],
   alias: {
     "@app": "./src/app",
+    "@config": "./src/config",
+    "@models": "./src/models",
     "@pages": "./src/views/pages",
     "@partials": "./src/views/partials",
     "@components": "./src/views/components",
-    "@initializers": "./src/config/initializers",
+    "@hooks": "./src/views/hooks",
     "@assets": "./src/assets",
     "@styles": "./src/styles",
   },

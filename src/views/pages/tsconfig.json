@@ -1,18 +1,22 @@
 {
   "extends": "../../../tsconfig.base.json",
   "include": [
-    "../pages/**/*.tsx",
-    "../partials/**/*.tsx",
-    "../components/**/*.tsx"
+    "../../**/*.ts",
+    "../../**/*.tsx",
+    "../../**/*.json"
   ],
   "compilerOptions": {
     "baseUrl": "../../../",
     "outDir": "../../../lib",
     "composite": true,
     "paths": {
+      "@app/*": ["./src/app/*"],
+      "@config/*": ["./src/config/*"],
+      "@models/*": ["./src/models/*"],
       "@pages/*": ["./src/views/pages/*"],
       "@partials/*": ["./src/views/partials/*"],
-      "@components/*": ["./src/views/components/*"]
+      "@components/*": ["./src/views/components/*"],
+      "@hooks/*": ["./src/views/hooks/*"]
     }
   }
 }
