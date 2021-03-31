@@ -1,5 +1,5 @@
-import React from 'react'
-import '@styles/App.css'
+import React, { Suspense } from 'react'
+import '@styles/App.scss'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Routes from './Routes'
 import NavigationArea from '@partials/NavigationArea'
@@ -13,7 +13,19 @@ const Root: React.FC = () => {
       }}>
         <Router>
           <NavigationArea />
-          <Routes />
+          <Suspense fallback={'loading...'}>
+            <Routes />
+          </Suspense>
+        </Router>
+      </context.Provider>
+      <context.Provider value={{
+        store,
+      }}>
+        <Router>
+          <NavigationArea />
+          <Suspense fallback={'loading...'}>
+            <Routes />
+          </Suspense>
         </Router>
       </context.Provider>
     </div>

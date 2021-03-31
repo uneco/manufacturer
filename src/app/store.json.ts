@@ -8,6 +8,9 @@ export default {
       "properties": {
         "displayName": {
           "type": "string"
+        },
+        "price": {
+          "type": "integer"
         }
       }
     },

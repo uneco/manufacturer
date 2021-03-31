@@ -1,17 +1,24 @@
-import { useStore } from '@hooks/store'
-import React from 'react'
+import RoundedList from '@components/RoundedList'
+import ProductsList from '@partials/ProductsList'
+import React, { Suspense } from 'react'
+import styled from 'styled-components'
+
+const Container = styled.div`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 350px;
+`
 
 const ProductsPage: React.FC = () => {
-  const store = useStore()
-
-  return <>
+  return <Container>
     <h1>Products</h1>
-    <ul>
-      {store.products.read().map((product) => <li key={product.id}>
-        {product.data.displayName}
-      </li>)}
-    </ul>
-  </>
+    <RoundedList>
+      <Suspense fallback={<li>loading...</li>}>
+        <ProductsList />
+      </Suspense>
+    </RoundedList>
+  </Container>
 }
 
 export default ProductsPage

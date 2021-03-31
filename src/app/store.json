@@ -6,8 +6,15 @@
       "properties": {
         "displayName": {
           "type": "string"
+        },
+        "price": {
+          "type": "integer"
         }
-      }
+      },
+      "required": [
+        "displayName",
+        "price"
+      ]
     },
     "users": {
       "collections": {

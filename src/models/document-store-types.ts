@@ -34,6 +34,7 @@ export type EntitySchemaToFetchableCollectionType<T, EX, SYNC> = (SYNC extends t
   read(): EntitySchemaToType<T, EX, SYNC>[];
 } : {
   fetch(): Promise<EntitySchemaToType<T, EX, SYNC>[]>;
+  subscribe(subscriber: (data: EntitySchemaToType<T, EX, SYNC>[]) => void): () => void;
 }) & {
     [K in keyof EX]: EX[K] extends ((...a: any[]) => any)
     ? ((...args: Parameters<EX[K]>) => EntitySchemaToFetchableCollectionType<T, EX, SYNC>)
@@ -45,6 +46,7 @@ export type EntitySchemaToResourceType<T, EX, SYNC> = EntitySchemaToFetchableCol
     read(): EntitySchemaToType<T, EX, SYNC>;
   } : {
     fetch(): Promise<EntitySchemaToType<T, EX, SYNC>>;
+    subscribe(subscriber: (data: EntitySchemaToType<T, EX, SYNC>) => void): () => void;
   });
 }
 
