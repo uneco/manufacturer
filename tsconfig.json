@@ -1,7 +1,10 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "paths": {
+      "*": ["./.snowpack/types/*"]
+    }
   },
   "include": [
     "src/**/*.tsx",
