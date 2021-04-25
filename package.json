@@ -1,12 +1,15 @@
 {
+  "name": "snowpack-template-helix",
   "license": "UNLICENSED",
-  "name": "silent-wind",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.tsx\"",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
   },
+  "keywords": [
+    "csa-template"
+  ],
   "devDependencies": {
     "@snowpack/plugin-dotenv": "^2.0.5",
     "@snowpack/plugin-react-refresh": "^2.4.0",
