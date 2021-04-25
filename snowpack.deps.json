@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "firebase": "^8.4.2",
+    "json-stable-stringify": "^1.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.3"
+  },
+  "lock": {
+    "firebase#^8.4.2": "firebase@v8.4.2-RteVJGOA7e8Fa6ABX6rv",
+    "json-stable-stringify#^1.0.1": "json-stable-stringify@v1.0.1-4k2xWeiI2f0VcCyOYEsW",
+    "react#^17.0.2": "react@v17.0.1-yH0aYV1FOvoIPeKBbHxg",
+    "react-dom#^17.0.2": "react-dom@v17.0.1-oZ1BXZ5opQ1DbTh7nu9r",
+    "react-router-dom#^5.2.0": "react-router-dom@v5.2.0-WgWKQeMwj1Uwqm58sNUY",
+    "styled-components#^5.2.3": "styled-components@v5.2.3-WP917wV8bx1ZaB2io4Ei"
+  }
+}

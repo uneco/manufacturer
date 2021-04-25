@@ -9,6 +9,7 @@
     "outDir": "../../lib",
     "composite": true,
     "paths": {
+      "*": ["./.snowpack/types/*"],
       "@app/*": ["./src/app/*"],
       "@config/*": ["./src/config/*"],
       "@models/*": ["./src/models/*"],
